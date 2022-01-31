@@ -22,6 +22,14 @@ jobs:
         java-version: 8.0.322
         distribution: 'temurin'
         cache: maven
+    - name: find my dir
+      run: |
+         pwd
+         ls -a
+      
+      
+  
+    
     - name: Build with Maven
       run: mvn -B package --file my-app/pom.xml
     - name: Create Folder For Stageing
@@ -29,16 +37,16 @@ jobs:
         cd my-app 
         mkdir stageing 
        
-        cp target/*.jar stageing
+     #   cp target/*.jar stageing
     
     
     - name: list the foldr 
       run: ls -a
     - name: list all file in target folder
       run: |
-        
-          cd target 
-          ls -a
+         ls -a
+      #    cd target 
+         
          # java my-app-1.0-SNAPSHOT.jar
   #  - name: create artifact
  #     uses: actions/upload-artifact@v2
