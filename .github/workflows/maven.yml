@@ -26,16 +26,17 @@ jobs:
       run: mvn -B package --file my-app/pom.xml
     - name: Create Folder For Stageing
       run: |
+        cd my-app 
         mkdir stageing 
-        pwd
-        # cp target/*.jar stageing
+       
+        cp target/*.jar stageing
     
     
     - name: list the foldr 
       run: ls -a
     - name: list all file in target folder
       run: |
-        pwd
+        
         # cd target 
         # ls -a
         # java my-app-1.0-SNAPSHOT.jar
