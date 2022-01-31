@@ -39,7 +39,7 @@ jobs:
         
           cd target 
           ls -a
-          java my-app-1.0-SNAPSHOT.jar
+         # java my-app-1.0-SNAPSHOT.jar
     - name: create artifact
       uses: actions/upload-artifact@v2
       with:
