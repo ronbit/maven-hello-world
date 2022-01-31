@@ -7,8 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+ 
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,6 +23,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: set java 1.8
+        uses: actions/setup-java@v1
+        with:
+           java-version: 1.8
+           
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
