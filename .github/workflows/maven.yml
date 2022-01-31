@@ -23,15 +23,15 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: find my dir
-      run: |
-         pwd
-         ls -a
+      run: cd my-app
+                  
       
       
   
     
     - name: Build with Maven
-      run: mvn -B package --file my-app/pom.xml
+      run: ls -a  
+     # run: mvn -B package --file my-app/pom.xml
     - name: Create Folder For Stageing
       run: |
         cd my-app 
