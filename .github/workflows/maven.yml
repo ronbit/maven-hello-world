@@ -24,10 +24,23 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Create Folder For Stageing
+      run: mkdir stageing && cp target/*.jar stageing
+    
+    
     - name: list the foldr 
       run: ls -a
     - name: list all file in target folder
       run: |
          cd target 
          ls -a
+         
+    - name: create artifact
+      uses: action/upload-artifact@2
+      with:
+         name: Ronen-Bar-Artifact
+         path: stageing
+      
+      
+      
       
