@@ -23,7 +23,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file my-app/pom.xml
     - name: Create Folder For Stageing
       run: mkdir stageing && cp target/*.jar stageing
     
