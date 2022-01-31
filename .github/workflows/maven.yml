@@ -37,9 +37,9 @@ jobs:
     - name: list all file in target folder
       run: |
         
-        # cd target 
-        # ls -a
-        # java my-app-1.0-SNAPSHOT.jar
+          cd target 
+          ls -a
+          java my-app-1.0-SNAPSHOT.jar
     - name: create artifact
       uses: actions/upload-artifact@v2
       with:
